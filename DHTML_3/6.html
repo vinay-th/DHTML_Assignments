@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      label {
+        font-size: 28px;
+      }
+      .td1 {
+        text-align: center;
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Employee Salary</h1>
+      <table>
+        <tr>
+          <td><label>Name</label></td>
+          <td class="td1">
+            <br />
+            <input type="text" id="name" style="width: 70%" required />
+            <br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td><label>Age</label></td>
+          <td class="td1">
+            <br />
+            <input type="text" id="age" style="width: 70%" required />
+            <br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td><label>Department</label></td>
+          <td class="td1">
+            <br />
+            <input type="text" id="dept" style="width: 70%" required />
+            <br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td><label>Designation</label></td>
+          <td class="td1">
+            <br />
+            <input type="text" id="desg" style="width: 70%" required />
+            <br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td><label>No. Of working days</label></td>
+          <td class="td1">
+            <br />
+            <input type="text" id="work" style="width: 70%" required />
+            <br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td><label>Salary</label></td>
+          <td class="td1" id="sal">
+            <br />
+
+            <br /><br />
+          </td>
+        </tr>
+      </table>
+      <br />
+      <button type="button" class="btn btn-lg btn-dark" onclick="subs()">
+        Submit
+      </button>
+      <div id="res"></div>
+    </div>
+    <script>
+      function subs() {
+        var age = document.getElementById("age").value;
+        var name = document.getElementById("name").value;
+        var sal;
+        var dept = document.getElementById("dept").value;
+        var desg = document.getElementById("desg").value;
+        var workDay = document.getElementById("work").value;
+
+        if (name == "") alert("Enter the name");
+        else if (!isNaN(name)) alert("Only alphabets allowed in name");
+        else if (name.length >= 10) alert("minimum 10 character only");
+        if (dept == "") alert("Enter the department");
+        if (desg == "") alert("Enter the designation");
+        if (workDay == "") alert("Enter the work Day");
+        else if (workDay >= 25) {
+          sal = 10000;
+          document.getElementById("sal").innerHTML = sal;
+        } else if (workDay <= 25) {
+          sal = 8000;
+          document.getElementById("sal").innerHTML = sal;
+        }
+        if (age == "") alert("Enter the age");
+        else if (age <= 18) alert("You have to be atleast 18");
+      }
+    </script>
+  </body>
+</html>

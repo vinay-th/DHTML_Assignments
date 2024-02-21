@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arithmetic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script>
+        function addi(){
+            var num1 = parseInt(prompt("Enter the first number: "));
+            var num2 = parseInt(prompt("Enter the second number: "));
+            var result=num1+num2;
+            document.write("Addition of "+num1+" and "+num2+" is "+result);
+        }
+        function subt(){
+            var num1 = parseInt(prompt("Enter the first number: "));
+            var num2 = parseInt(prompt("Enter the second number: "));
+            var result=numn1-num2;
+            document.write("Subtraction of "+num1+" and "+num2+" is "+result);
+        }
+        function mult(){
+            var num1 = parseInt(prompt("Enter the first number: "));
+            var num2 = parseInt(prompt("Enter the second number: "));
+            var result=num1*num2;
+            document.write("Multiplication of "+num1+" and "+num2+" is "+result);
+        }
+        function div(){
+            var num1 = parseInt(prompt("Enter the first number: "));
+            var num2 = parseInt(prompt("Enter the second number: "));
+            var result=num1/num2;
+            document.write("Division of "+num1+" and "+num2+" is "+result);
+        }
+    </script>
+</head>
+<body>
+    <div class=" justify-content-center h-100 d-flex">
+    <button class="btn btn-dark btn-lg" onclick="addi();">
+        Addition
+    </button><br>
+    <button class="btn btn-dark btn-lg" onclick="subt();">
+        Subtraction
+    </button><br>
+    <button class="btn btn-dark btn-lg" onclick="mult();">
+        Multiplication
+    </button><br>
+    <button class="btn btn-dark btn-lg" onclick="div();">
+        Division
+    </button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+.container{
+    background-color: #a21362;
+    color: aliceblue;
+    padding: 50px;
+    width: 800px;
+}
+.r2{
+    padding: 10px;
+}
+.col{
+    background-color: #450734;
+}
+.lbl{
+    padding-left: 100px;
+}
+.cl2{
+    right: 5px;
+    padding: 0px;
+    text-align: start;
+}
+.but{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.but1{
+    background-color: aliceblue;
+    color: #a21362;
+    width: 500px;
+}
+.btn:hover{
+    background-color: #a21362;
+    color: aliceblue;
+}
+.label{
+    text-align: justify;
+    padding: 30px 0 50px  50px;
+    
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      #res {
+        padding: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Registration Form</h1>
+      <br /><br />
+      <div class="sp" style="text-align: right">
+        <span style="color: red; display: none">*indicates required</span>
+      </div>
+      <label>First Name: &nbsp;</label>
+      <input type="text" id="frst" style="width: 70%" required />
+      <br /><br />
+      <label>Last Name: &nbsp;</label>
+      <input type="text" id="lst" style="width: 70%" required />
+      <br /><br />
+      <label>Gender: &nbsp;</label>
+      <input type="radio" id="m" value="male" name="gender" checked /> Male
+      <input type="radio" id="f" value="female" name="gender" /> Female
+      <br /><br />
+      <label>Hobbies: &nbsp;</label>
+      <input type="checkbox" name="hob" id="cricket" /> cricket
+      <input type="checkbox" name="hob" id="singing" /> singing
+      <input type="checkbox" name="hob" id="dancing" /> dancing <br /><br />
+      <label>Countries: &nbsp;</label>
+      <select name="sub" id="cont">
+        <option value="India">India</option>
+        <option value="Canada">Canada</option>
+        <option value="USA">USA</option>
+        <option value="France">France</option>
+        <option value="Germany">Germany</option>
+      </select>
+      <br /><br />
+
+      <button type="button" class="btn btn-dark" onclick="subs()">
+        SUBMIT
+      </button>
+      <br /><br />
+      <div id="res"></div>
+    </div>
+    <script>
+      function subs() {
+        var cont = document.getElementById("cont").value;
+        var frst = document.getElementById("frst").value;
+        var lst = document.getElementById("lst").value;
+        var gen;
+        var hob1, hob2, hob3;
+
+        if (frst == "") alert("Enter the first name");
+        else if (!isNaN(frst)) alert("Only alphabets allowed in name");
+        if (lst == "") alert("Enter the last name");
+
+        if (document.getElementById("f").checked) gen = "female";
+        else gen = "male";
+
+        if (document.getElementById("cricket").checked) hob1 = "cricket";
+        else hob1 = "";
+        if (document.getElementById("singing").checked) hob2 = "singing";
+        else hob2 = "";
+        if (document.getElementById("dancing").checked) hob3 = "dancing";
+        else hob3 = "";
+
+        document.getElementById("res").innerHTML =
+          "Name: " +
+          frst +
+          " " +
+          lst +
+          "<br>" +
+          "Gender: " +
+          gen +
+          "<br>" +
+          "Hobbies: " +
+          hob1 +
+          " " +
+          hob2 +
+          " " +
+          hob3 +
+          " " +
+          "<br>" +
+          "Country: " +
+          cont;
+        document.getElementById("res").style.border = "2px solid";
+      }
+    </script>
+  </body>
+</html>

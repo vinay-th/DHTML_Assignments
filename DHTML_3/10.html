@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col col-lg">
+                <form action="">
+                    <div class="row r2">
+                    <div class="col-lg-4 lbl">
+                        <br>
+                        <label for="">Name :</label><br><br>
+                        <label for="">Mail :</label><br><br>
+                        <label for="">Password :</label><br><br>
+                        <label for="">Phone Number :</label><br><br>
+                        <label for="">Gender :</label><br><br>
+                        <label for="">Language :</label><br><br>
+                        <label for="">Zip Code :</label><br><br>
+                        <label for="">About :</label><br><br>
+                    </div>
+                    <div class="col cl2">
+                        <br>
+                        <input type="text" name="" id="frst" placeholder="your name" class="inp2">
+                        <br><br>
+                        <input type="text" name="" id="lst" placeholder="your name" class="inp2">
+                        <br><br>
+                        <input type="password" name="" id="pass" class="inp2">
+                        <br><br>
+                        <input type="text" name="" id="num" class="inp2">
+                        <br>
+                        <input type="radio" name="male" id="gen" class="rdio">Male&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="female" id="gen" class="rdio">Female&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="other" id="gen" class="rdio">Other
+                        <br><br>
+                        <select name="" id="lang">
+                            <option value="">select a language-----</option>
+                        </select>
+                        <br><br>
+                        <input type="text" name="" id="zip" class="inp2">
+                        <br><br>
+                        <textarea name="about" id="" cols="30" rows="3"></textarea>
+                    </div>
+                    </div>
+                </form>
+                <div class="but">
+                    <button class="btn btn-lg but1" onclick="validate()">Register</button>
+                    <div id="res">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function validate()
+        {
+            var firstName = document.getElementById("frst").value;
+            var email = document.getElementById("lst").value;
+            var pass = document.getElementById("pass").value;
+            var num = document.getElementById("num").value;
+            var atPos = email.indexOf("@");
+            var dotPos = email.lastIndexOf(".");
+            var zip = document.getElementById("zip").value;
+            
+            if(firstName == '')
+                alert("enter first name");
+            else if(firstName.length > 6)
+                alert("First name should be less than 6");
+            if(email == '')
+                alert("enter email");
+            else if(atPos > 1|| dotPos<atPos+2 || dotPos+2>email.length)
+                alert("The entered email is invalid");
+            if(pass == '')
+                alert("enter pass");
+            else if(pass.length>10)
+                alert("password can be of max 10 char");
+            if(num == '')
+                alert("enter number");
+            else if(num.length>10)
+                alert("Number can be of max 10 char");
+            if(zip == '')
+                alert("enter zip");
+            else if(zip.length>10)
+                alert("Number can be of max 10 char");
+
+            document.getElementById('res').innerHTML = firstName + "<br>" + email + "<br>" + pass + "<br>" + num + "<br>" +zip+ "<br>" + "<br>";
+        }
+    </script>
+</body>
+</html>

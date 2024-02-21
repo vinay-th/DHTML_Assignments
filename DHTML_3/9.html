@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      label {
+        font-size: 28px;
+      }
+      .td1 {
+        text-align: center;
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student Marks</h1>
+      <table>
+        <tr>
+          <td><label>Name</label></td>
+          <td class="td1">
+            <br />
+            <input type="text" id="name" style="width: 70%" required />
+            <br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td><label>Semester</label></td>
+          <td class="td1">
+            <br />
+            <input type="text" id="sem" style="width: 70%" required />
+            <br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td><label>Science Marks</label></td>
+          <td class="td1">
+            <br />
+            <input type="text" id="marks1" style="width: 70%" required />
+            <br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td><label>Math Marks</label></td>
+          <td class="td1">
+            <br />
+            <input type="text" id="marks2" style="width: 70%" required />
+            <br /><br />
+          </td>
+        </tr>
+        <tr>
+          <td><label>Computer Marks</label></td>
+          <td class="td1">
+            <br />
+            <input type="text" id="marks3" style="width: 70%" required />
+            <br /><br />
+          </td>
+        </tr>
+      </table>
+      <br />
+      <button type="button" class="btn btn-lg btn-dark" onclick="sub()">
+        Submit
+      </button>
+      <div id="res"></div>
+    </div>
+    <script>
+      function sub() {
+        var marks1 = document.getElementById("marks1").value;
+        var marks2 = document.getElementById("marks2").value;
+        var marks3 = document.getElementById("marks3").value;
+        var name = document.getElementById("name").value;
+
+        if (name == "") alert("Enter the name");
+        if (isNaN(marks1) || isNaN(marks2) || isNaN(marks3)) {
+          alert("Marks can be in numbers only");
+        }
+        var sum = marks1 + marks2 + marks3;
+        var avg = sum / 3;
+
+        document.getElementById("res").innerHTML =
+          "Science Marks: " +
+          marks1 +
+          "<br>" +
+          "Math Marks: " +
+          marks2 +
+          "<br>" +
+          "Computer Marks: " +
+          marks3;
+        document.getElementById("res").style.border = "2px solid";
+        document.getElementById("res").style.fontSize = "20px";
+      }
+    </script>
+  </body>
+</html>

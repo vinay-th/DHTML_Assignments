@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function facto(){
+            const num = document.getElementById('num').value;
+            const res_dis = document.getElementById('result');
+
+            function fact(n){
+                if (n===0)
+                    return 1;
+                else
+                    return n*fact(n-1);
+            }
+
+            const res = fact(parseInt(num));
+            res_dis.textContent = `The factorial of ${num} is ${res}` ;
+        }
+    </script>
+</head>
+<body>
+    <h1>For calculating the Factorial</h1>
+    <form action="">
+        <label for="">Enter your number</label>
+        <input type="text" id="num">
+        <button type="button" onclick="facto();" class="btn btn-outline-light btn-dark">Calculate Factorial</button>
+    </form>
+    <div id="result"></div>
+</body>
+</html>
