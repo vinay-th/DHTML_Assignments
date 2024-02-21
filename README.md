@@ -1,8 +1,8 @@
-# Dynamic HTML (DHTML) Assignment Folder
+# 🌟 Dynamic HTML (DHTML) Assignment Folder 🌟
 
 Welcome to the Dynamic HTML (DHTML) Assignment Folder! Here you will find a collection of assignments spanning across five units, each focusing on JavaScript, forms, login/signup pages, and form validations. Get ready to delve into the world of dynamic web development and hone your skills in creating interactive and engaging web applications.
 
-## Assignment Units:
+## 📚 Assignment Units:
 
 ### Unit 1: Introduction to DHTML
 - **Objective**: Understand the basics of Dynamic HTML.
@@ -24,7 +24,7 @@ Welcome to the Dynamic HTML (DHTML) Assignment Folder! Here you will find a coll
 - **Objective**: Explore advanced DHTML techniques and best practices.
 - **Assignments**: Dive deeper into DHTML concepts, including AJAX requests, DOM manipulation, and responsive design principles.
 
-## Instructions for Each Assignment:
+## 📝 Instructions for Each Assignment:
 
 1. **Accessing Assignment Files**: Navigate to the respective unit folder to find the assignment files.
 2. **Running the Code**: Open the HTML files in your preferred web browser to run the assignments locally.
@@ -32,16 +32,16 @@ Welcome to the Dynamic HTML (DHTML) Assignment Folder! Here you will find a coll
 4. **Validation**: Ensure all form inputs are validated as per the provided instructions.
 5. **Submission**: Follow the submission guidelines provided by your instructor for each assignment.
 
-## Additional Resources:
+## ℹ️ Additional Resources:
 
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web) - Comprehensive documentation for web technologies.
 - [W3Schools](https://www.w3schools.com/) - Online tutorials and references for HTML, CSS, JavaScript, and more.
 - [Stack Overflow](https://stackoverflow.com/) - Community-driven platform for asking programming-related questions.
 
-## Feedback and Support:
+## 🙌 Feedback and Support:
 
 If you encounter any issues or have questions regarding the assignments, feel free to reach out to the course instructor or teaching assistants for assistance. Your feedback is valuable in improving the learning experience for everyone.
 
 Let's embark on this journey together and unlock the potential of Dynamic HTML!
 
-Happy Coding! 🚀
+🚀 Happy Coding! 🚀
