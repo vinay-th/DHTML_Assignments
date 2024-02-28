@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Form</title>
+    <link rel="stylesheet" href="css/4.css" />
+  </head>
+  <body>
+    <h2>Web Form</h2>
+    <br />
+    <div class="container">
+      <form id="myForm">
+        <table>
+          <tr>
+            <td><label for="username">Username:</label></td>
+            <td>
+              <input type="text" id="username" name="username" required />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="password">Password:</label></td>
+            <td>
+              <input type="password" id="password" name="password" required />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="city">City of Employment:</label></td>
+            <td><input type="text" id="city" name="city" required /></td>
+          </tr>
+          <tr>
+            <td><label for="server">Web server:</label></td>
+            <td>
+              <select id="server" name="server" required>
+                <option value="">Choose a server</option>
+                <option value="server1">Server 1</option>
+                <option value="server2">Server 2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><label>Please specify your role:</label></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <label class="radio-label" for="admin">Admin</label>
+              <input type="radio" id="admin" name="role" value="admin" /><br />
+              <label class="radio-label" for="engineer">Engineer</label>
+              <input
+                type="radio"
+                id="engineer"
+                name="role"
+                value="engineer"
+              /><br />
+              <label class="radio-label" for="manager">Manager</label>
+              <input
+                type="radio"
+                id="manager"
+                name="role"
+                value="manager"
+              /><br />
+              <label class="radio-label" for="guest">Guest</label>
+              <input type="radio" id="guest" name="role" value="guest" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><label>Single Sign-on to the following:</label></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <input type="checkbox" id="mail" name="mail" />
+              <label for="mail">Mail</label>
+              <input type="checkbox" id="payroll" name="payroll" />
+              <label for="payroll">Payroll</label>
+              <input type="checkbox" id="selfservice" name="selfservice" />
+              <label for="selfservice">Self-service</label>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Login" />
+              <input type="reset" value="Reset" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert("Form submitted");
+        });
+
+      document
+        .getElementById("myForm")
+        .addEventListener("reset", function (event) {
+          alert("Form reset");
+        });
+
+      document
+        .getElementById("server")
+        .addEventListener("change", function (event) {
+          alert("Server changed");
+        });
+
+      document
+        .getElementById("username")
+        .addEventListener("select", function (event) {
+          event.target.style.backgroundColor = "yellow";
+        });
+    </script>
+  </body>
+</html>

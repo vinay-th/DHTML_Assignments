@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/1.css" />
+  </head>
+  <body>
+    <div class="container container1 justify-content-center text-center">
+      <h1>Sign Up</h1>
+      <div class="container maindiv">
+        <table>
+          <tr>
+            <td class="labels">First Name</td>
+            <td class="creds">
+              <input
+                type="text"
+                name="firstname"
+                id="firstname"
+                placeholder="First Name"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="labels">Last Name</td>
+            <td class="creds">
+              <input
+                type="text"
+                name="lastname"
+                id="lastname"
+                placeholder="Last Name"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="labels">Screen Name</td>
+            <td class="creds">
+              <input
+                type="text"
+                name="screenname"
+                id="screenname"
+                placeholder="Screen Name"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="labels">Date Of birth</td>
+            <td class="creds">
+              <select name="day" id="day" class="dob">
+                <option class="dob" value="may">may</option>
+              </select>
+              <select name="month" id="month" class="dob">
+                <option class="dob" value="5">5</option>
+              </select>
+              <select name="year" id="year" class="dob">
+                <option class="dob" value="1985">1985</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="labels">Gender</td>
+            <td class="creds">
+              <input type="radio" name="gender" id="male" value="male" />Male
+              <input
+                type="radio"
+                name="gender"
+                id="female"
+                value="female"
+              />Female
+            </td>
+          </tr>
+          <tr>
+            <td class="labels">Country</td>
+            <td class="creds">
+              <select name="country" id="country">
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="labels">Mail</td>
+            <td class="creds">
+              <input type="email" name="email" id="email" placeholder="Email" />
+            </td>
+          </tr>
+          <tr>
+            <td class="labels">Phone Number</td>
+            <td class="creds">
+              <input
+                type="number"
+                name="phone"
+                id="phone"
+                placeholder="Phone Number"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="labels">Password</td>
+            <td class="creds">
+              <input
+                required
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="labels">Confirm Password</td>
+            <td class="creds">
+              <input
+                type="password"
+                name="cpassword"
+                id="cpassword"
+                placeholder="Confirm Password"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td class="labels"></td>
+            <td class="creds">
+              <input type="checkbox" name="terms" id="terms" />
+              Terms and Conditions
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="container justify-content-right foot-cont">
+        <button type="button" class="sub" onclick="validate()">Submit</button>
+        <button type="button" class="can" value="Cancel">Cancel</button>
+      </div>
+    </div>
+    <div class="res" id="res"></div>
+  </body>
+  <script>
+    function validate() {
+      var firstname = document.getElementById("firstname").value;
+      var lastname = document.getElementById("lastname").value;
+      var screenname = document.getElementById("screenname").value;
+      var gender = document.querySelector('input[name="gender"]:checked');
+      var country = document.getElementById("country").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+      var password = document.getElementById("password").value;
+      var cpassword = document.getElementById("cpassword").value;
+      var res = document.getElementById("res");
+
+      if (firstname === "") {
+        alert("Please enter your first name");
+        return false;
+      }
+      if (lastname === "") {
+        alert("Please enter your last name");
+        return false;
+      }
+      if (screenname === "") {
+        alert("Please enter your screen name");
+        return false;
+      }
+      if (!gender) {
+        alert("Please select your gender");
+        return false;
+      }
+      if (country === "") {
+        alert("Please enter your country");
+        return false;
+      }
+      if (email === "") {
+        alert("Please enter your email");
+        return false;
+      }
+      if (phone === "") {
+        alert("Please enter your phone number");
+        return false;
+      }
+      if (phone.length !== 10) {
+        alert("Phone number should be 10 digits");
+        return false;
+      }
+      if (password === "") {
+        alert("Please enter your password");
+        return false;
+      }
+      if (cpassword === "") {
+        alert("Please enter your confirm password");
+        return false;
+      }
+      if (password !== cpassword) {
+        alert("Passwords do not match");
+        return false;
+      }
+
+      res.innerHTML += `<p>First Name: ${firstname}</p>
+      <p>Last Name: ${lastname}</p>
+      <p>Screen Name: ${screenname}</p>
+      <p>Gender: ${gender.value}</p>
+      <p>Country: ${country}</p>
+      <p>Email: ${email}</p>
+      <p>Phone Number: ${phone}</p>
+      <p>Password: ${password}</p>`;
+    }
+  </script>
+</html>

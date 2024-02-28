@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GLS University</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .logo {
+        width: 552px;
+        height: 288px;
+      }
+
+      .logo:hover {
+        width: 276px;
+        height: 144px;
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      .content p {
+        color: #333;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .coordinates {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        font-size: 12px;
+        color: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="css/gls_logo.jpg" alt="GLS University Logo" class="logo"
+    onmouseenter="showCoords(event)" "/>
+    <div class="content">
+      <h1>GLS University</h1>
+      <p>
+        GLS University is a leading university in India, offering a wide range
+        of undergraduate and postgraduate programs.
+      </p>
+      <p></p>
+    </div>
+
+    <div class="coordinates" id="coords"></div>
+
+    <script>
+      function showCoords(event) {
+        var x = event.clientX;
+        var y = event.clientY;
+        var coords = document.getElementById("coords");
+        if (coords) {
+          coords.innerText = "X: " + x + " Y: " + y;
+        }
+      }
+    </script>
+  </body>
+</html>

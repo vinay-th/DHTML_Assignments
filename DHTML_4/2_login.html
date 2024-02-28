@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      form {
+        border: 1px solid #ccc;
+        padding: 30px;
+        width: 400px;
+        margin: 0 auto;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+      }
+      .error {
+        color: red;
+        font-size: 12px;
+      }
+    </style>
+    <script>
+      function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var error = "";
+
+        if (username === "") {
+          error += "Username is required. <br>";
+        }
+
+        if (password === "") {
+          error += "Password is required.";
+        }
+
+        if (error !== "") {
+          document.getElementById("error").innerHTML = error;
+          return false;
+        } else {
+          return true;
+        }
+      }
+
+      function changeColor(e) {
+        e.target.style.backgroundColor = "#f0f0f0";
+      }
+
+      function resetColor(e) {
+        e.target.style.backgroundColor = "#fff";
+      }
+
+      function showAlert() {
+        alert("Please click on Login button");
+      }
+    </script>
+  </head>
+  <body>
+    <form onsubmit="return validateForm()">
+      <h2 id="error"></h2>
+      <label for="username">Username:</label>
+      <input
+        type="text"
+        name="username"
+        id="username"
+        onfocus="changeColor(event)"
+        onblur="resetColor(event)"
+      />
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        onfocus="changeColor(event)"
+        onblur="resetColor(event)"
+      />
+      <button type="submit">Log In</button>
+    </form>
+    <script>
+      window.onload = showAlert;
+    </script>
+  </body>
+</html>
+̥

@@ -1,0 +1,58 @@
+.container1 {
+  height: 700px;
+  width: 800px;
+  padding: 0;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+.res {
+  display: inline-block;
+  width: 500px;
+  vertical-align: top;
+  background-color: rgb(255, 184, 242);
+}
+h1 {
+  text-align: left;
+  margin: 0;
+  padding: 15px;
+  background-color: orange;
+  color: yellow;
+}
+.maindiv {
+  color: yellow;
+  background-color: rgb(38, 19, 56);
+}
+.labels {
+  text-align: right;
+  padding: 10px;
+}
+.creds {
+  text-align: left;
+  padding: 10px;
+}
+.dob {
+  text-align: center;
+  border-radius: 15%;
+  width: 100px;
+  margin-right: 25px;
+}
+.foot-cont {
+  background-color: orange;
+  text-align: right;
+  padding: 10px;
+  padding-right: 25px;
+  margin: 0;
+}
+.sub {
+  color: aliceblue;
+  background-color: green;
+  margin-right: 10px;
+  width: 100px;
+}
+.can {
+  background-color: red;
+  color: aliceblue;
+  margin-right: 10px;
+  width: 100px;
+}
