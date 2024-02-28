@@ -1,0 +1,48 @@
+#myDiv {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation: colorChange 15s infinite, moveDiv 10s infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: green;
+  }
+  50% {
+    background-color: blue;
+  }
+  75% {
+    background-color: cyan;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+@keyframes moveDiv {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 0;
+    left: 150px;
+  }
+  50% {
+    top: 150px;
+    left: 150px;
+  }
+  75% {
+    top: 150px;
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}

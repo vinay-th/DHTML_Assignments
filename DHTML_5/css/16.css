@@ -1,0 +1,35 @@
+#myDiv {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation: color-change 15s infinite;
+}
+
+@keyframes color-change {
+  0% {
+    background-color: red;
+  }
+  33% {
+    background-color: green;
+  }
+  66% {
+    background-color: blue;
+  }
+  100% {
+    background-color: cyan;
+  }
+}
+
+@keyframes move-reverse {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -150px;
+  }
+}
+
+#myDiv {
+  animation: move-reverse 2s infinite alternate -1s;
+}
